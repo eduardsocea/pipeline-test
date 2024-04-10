@@ -6,14 +6,12 @@
 trigger:
 - main
 
+variables:
+- group: Sample
+
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: echo Varibles is $(DynamicVar)
+  displayName: 'Variable display'
